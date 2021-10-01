@@ -148,6 +148,7 @@ class PostcodeDownloader
 
         $this->unzip();
         $this->deleteSourceZip();
+        $this->renameExtractedCsvFile();
     }
 
     /**
@@ -187,7 +188,7 @@ class PostcodeDownloader
      */
     private function deleteSourceCsv(): void
     {
-        unlink($this->directory . DIRECTORY_SEPARATOR . "src-" . self::CSV_FILE);
+        unlink($this->directory . DIRECTORY_SEPARATOR . "doogal-" . self::CSV_FILE);
     }
 
     /**

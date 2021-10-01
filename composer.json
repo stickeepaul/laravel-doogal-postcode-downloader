@@ -1,0 +1,30 @@
+{
+    "name": "stickeepaul/laravel-doogal-postcode-downloader",
+    "description": "Downloads postcodes from Doogal.co.uk to a CSV",
+    "authors": [
+        {
+            "name": "Paul",
+            "email": "paul.tibbetts@stickee.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "illuminate/config": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/database": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "league/csv": "^9.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "stickeepaul\\PostcodeDownloader\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "stickeepaul\\PostcodeDownloader\\PostcodeDownloaderServiceProvider"
+            ]
+        }
+    }
+}
